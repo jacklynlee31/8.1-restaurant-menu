@@ -12,12 +12,6 @@ export default Ember.Route.extend({
       item.save().then(() => {
         this.transitionTo('menu.index');
       });
-  //     save: function(data) {
-  //       var item = this.modelFor('menu.create');
-  //       item.setProperties(data);
-  //       item.save().then(() => {
-  //         this.transitionTo('menu.index');
-  //       });
     }
   }
 });
