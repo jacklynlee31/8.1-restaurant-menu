@@ -6,11 +6,16 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('menu', {path: '/'}, function() {
+  this.route('back', function() {
     this.route('index', {path: '/'});
     this.route('create', {path: '/new'});
-    this.route('read', {path: '/:id'});
     this.route('update', {path: '/:id/update'});
+    this.route('read', {path: '/:id'});
+    this.route('login', {path: '/login'});
+  });
+
+  this.route('front', {path: '/'}, function() {
+    this.route('create', {path: '/add'});
   });
 });
 

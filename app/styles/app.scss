@@ -1,0 +1,94 @@
+@import "bourbon";
+@import "neat";
+
+// gray #414241
+// blue #6BBFEE
+
+html {
+  box-sizing: border-box;
+  font-family: arial;
+  color: #414241;
+  background-color: white;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.top {
+    border-bottom: 1em solid #6BBFEE;
+    color: #414241;
+    padding: .3em;
+    line-height: .3em;
+}
+.admin {
+    padding: 1em;
+    float: right;
+}
+
+.admin-page {
+  @include outer-container(500px);
+  text-align: center;
+  line-height: 3em;
+  margin-top: 6em;
+  padding: 1em;
+  border: 1em solid #6BBFEE;
+}
+
+.login-page {
+  @include outer-container(500px);
+  text-align: center;
+  margin-top: 6em;
+  padding: 1em;
+  line-height: 2em;
+  border: 1em solid #6BBFEE;
+}
+
+.login-page label {
+  display: block;
+}
+
+.login-page button {
+  background-color: white;
+  color: #414241;
+  margin: 0 auto;
+}
+
+.create-page {
+  @include outer-container(500px);
+  text-align: center;
+  margin-top: 6em;
+  padding: 1em;
+  line-height: 2em;
+  border: 1em solid #6BBFEE;
+}
+
+.create-page label {
+  display: block;
+}
+
+.create-page button {
+  background-color: white;
+  color: #414241;
+  margin: 0 auto;
+}
+
+.admin-page a {
+  color: #414241;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main {
+    // border: 1px solid blue;
+}
+
+.food {
+    @include span-columns(8 of 12);
+    border: 1px solid red;
+}
+
+.sidebar {
+    @include span-columns(4 of 12);
+    border: 1px solid green;
+}
