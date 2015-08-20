@@ -1,9 +1,7 @@
-Read Me
-
 <ul class="read-page">
     {{#each model as |item|}}
-        {{#link-to 'back.update'}}<li>{{item.menuItem}}</li>{{/link-to}}
-        {{#link-to 'back.update'}}<li>{{item.price}}</li>{{/link-to}}
+        <li>{{item.menuItem}}</li>
+        <li>{{item.price}}</li>
     {{/each}}
 </ul>
 

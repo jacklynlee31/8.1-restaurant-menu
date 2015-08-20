@@ -9,8 +9,8 @@ Router.map(function() {
   this.route('back', function() {
     this.route('index', {path: '/'});
     this.route('create', {path: '/new'});
-    this.route('update', {path: '/:id/update'});
-    this.route('read', {path: '/:id'});
+    this.route('update');
+    this.route('read');
     this.route('login', {path: '/login'});
   });
 

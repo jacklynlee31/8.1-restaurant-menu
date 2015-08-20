@@ -10,7 +10,7 @@ export default Ember.Route.extend({
     // fired by the save action in the create template
     save: function(item) {
       item.save().then(() => {
-        this.transitionTo('back.read');
+        this.transitionTo('back.read', item);
       });
     }
   }
