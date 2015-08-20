@@ -1,10 +1,10 @@
 <div class="create-page">
     <form {{action 'save' model on='submit'}}>
-    <label for="menu-item">Menu Item:</label>
-    {{input id="menu-item" type="text" value=model.menuItem}}
+        <label for="menu-item">Menu Item:</label>
+        {{input id="menu-item" type="text" value=model.menuItem}}
 
-    <label for="menu-price">Price:</label>
-    {{input id="menu-price" type="text" value=model.price}}
+        <label for="menu-price">Price:</label>
+        {{input id="menu-price" type="text" value=model.price}}
+        <button>Submit Item to Menu</button>
     </form>
-    <button>{{#link-to 'back.read'}}Add Item to Menu{{/link-to}}</button>
 </div>
