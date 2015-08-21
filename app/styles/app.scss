@@ -18,7 +18,11 @@ html {
 // FRONT OF HOUSE
 
 .all {
-  @include outer-container(850px);
+  @include outer-container(950px);
+}
+.sidebar {
+  @include span-columns(4 of 12);
+  @include omega(3n);
 }
 
 .top {
@@ -32,15 +36,13 @@ html {
     text-align: right;
     border-bottom: .3em solid #9A3334;
 }
-.main {
-    // border: 1px solid blue;
-}
 .cat {
   font-weight: bold;
   line-height: 3em;
 }
-.food {
+.main {
     @include span-columns(8 of 12);
+    @include omega(3n);
     // border: 1px solid red;
 }
 .front-menu {
@@ -52,10 +54,7 @@ html {
   border-bottom: 4px solid #9A3334;
   padding-bottom: 1em;
 }
-.sidebar {
-    @include span-columns(4 of 12);
-    // border: 1px solid green;
-}
+
 .sidebar-menu {
   padding-top: 1em;
   text-align: right;

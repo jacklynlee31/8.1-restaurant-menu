@@ -1,23 +1,14 @@
 <div class="all">
+
     <div class="top">
         <h2>Angel Thai Cuisine</h2>
         <h5>6736 Brockton Ave Riverside CA, 92506</h5>
         <h5>Open Today: 11:00am - 3:00pm</h5>
     </div>
-
     <div class="main">
         {{menu-categories items=model}}
-        <div class="sidebar">
-            <div class="admin">
-            {{#link-to 'back.login'}}Administrator Login{{/link-to}}
-            </div>
-            <div class="sidebar-menu">
-                <span>Your Current Order:</span>
-                <span class="front-order">
-                    {{item.menuItem}}
-                    {{item.price}}
-                </span>
-            </div>
-        </div>
+    </div>
+    <div class="sidebar">
+        {{sidebar-order items=model}}
     </div>
 </div>
