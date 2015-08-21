@@ -1,9 +1,18 @@
-<ul class="read-page">
-    {{#each model as |item|}}
-        <li>{{item.menuItem}}</li>
-        <li>{{item.price}}</li>
-    {{/each}}
-</ul>
-
-{{#link-to 'back.index'}}Return to Admin Page{{/link-to}}
+<div class="back-read">
+    <div class="read-page">
+        {{#each model as |item|}}
+            <span class="mp">
+                {{item.menuItem}} - {{item.price}} - {{item.category}}
+            </span>
+            <span class="d">
+            {{item.description}}<br>
+            {{#link-to 'back.update' item}}Edit{{/link-to}} -
+            <a href="#" {{action 'delete' item}}>Delete</a>
+            </span>
+        {{/each}}
+    </div>
+    {{#link-to 'back.create'}}Create a New Menu Item{{/link-to}}
+    <br>
+    {{#link-to 'back.index'}}Return to Admin Page{{/link-to}}
+</div>
 

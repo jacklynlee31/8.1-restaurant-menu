@@ -8,23 +8,60 @@ html {
   box-sizing: border-box;
   font-family: arial;
   color: #414241;
-  background-color: white;
+  background-color: #F3EFE0;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+// FRONT OF HOUSE
+
+.all {
+  @include outer-container(850px);
+}
+
 .top {
-    border-bottom: 1em solid #6BBFEE;
+    border-bottom: 1em solid #9A3334;
     color: #414241;
     padding: .3em;
     line-height: .3em;
 }
 .admin {
     padding: 1em;
-    float: right;
+    text-align: right;
+    border-bottom: .3em solid #9A3334;
 }
+.main {
+    // border: 1px solid blue;
+}
+.cat {
+  font-weight: bold;
+  line-height: 3em;
+}
+.food {
+    @include span-columns(8 of 12);
+    // border: 1px solid red;
+}
+.front-menu {
+  line-height: 1.5em;
+  padding-top: 1em;
+}
+.front-menu-desc {
+  display: block;
+  border-bottom: 4px solid #9A3334;
+  padding-bottom: 1em;
+}
+.sidebar {
+    @include span-columns(4 of 12);
+    // border: 1px solid green;
+}
+.sidebar-menu {
+  padding-top: 1em;
+  text-align: right;
+}
+
+// BACK OF HOUSE
 
 .admin-page {
   @include outer-container(500px);
@@ -32,7 +69,7 @@ html {
   line-height: 3em;
   margin-top: 6em;
   padding: 1em;
-  border: 1em solid #6BBFEE;
+  border: 1em solid #9A3334;
 }
 
 .login-page {
@@ -41,7 +78,7 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #6BBFEE;
+  border: 1em solid #9A3334;
 }
 
 .login-page label {
@@ -60,7 +97,7 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #6BBFEE;
+  border: 1em solid #9A3334;
 }
 
 .create-page label {
@@ -71,6 +108,57 @@ html {
   background-color: white;
   color: #414241;
   margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 1em;
+}
+
+#menu-description {
+  width: 20em;
+  height: 5em;
+  resize: none;
+  border: 1px solid #C1C1C1;
+}
+
+.back-update {
+  @include outer-container(500px);
+  text-align: center;
+  margin-top: 6em;
+  padding: 1em;
+  line-height: 2em;
+  border: 1em solid #9A3334;
+}
+
+.back-update label {
+  display: block;
+}
+
+.back-update button {
+  background-color: white;
+  color: #414241;
+  margin: 0 auto;
+  display: block;
+}
+
+.back-read {
+  @include outer-container(500px);
+  text-align: center;
+  margin-top: 6em;
+  padding: 1em;
+  line-height: 2em;
+  border: 1em solid #9A3334;
+}
+.read-page {
+  list-style-type: none;
+}
+.d {
+  display: block;
+  border-bottom: 4px solid #9A3334;
+}
+a {
+  text-decoration: none;
+  color: #414241;
+  font-weight: bold;
 }
 
 .admin-page a {
@@ -78,17 +166,11 @@ html {
   font-weight: bold;
   text-decoration: none;
 }
-
-.main {
-    // border: 1px solid blue;
-}
-
-.food {
-    @include span-columns(8 of 12);
-    border: 1px solid red;
-}
-
-.sidebar {
-    @include span-columns(4 of 12);
-    border: 1px solid green;
-}
+// .back-update {
+//   @include outer-container(500px);
+//   text-align: center;
+//   margin-top: 6em;
+//   padding: 1em;
+//   line-height: 2em;
+//   border: 1em solid #6BBFEE;
+// }
