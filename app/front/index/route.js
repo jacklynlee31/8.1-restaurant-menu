@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
-// does this need to be renamed?
-
 export default Ember.Route.extend({
   model: function() {
     return this.store.findAll('item');
   },
+
+  item: Ember.inject.service('current-orders'),
 
   actions: {
     save: function(data) {

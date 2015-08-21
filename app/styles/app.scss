@@ -38,6 +38,7 @@ html {
 }
 .cat {
   font-weight: bold;
+  font-size: 1em;
   line-height: 3em;
 }
 .main {
@@ -51,13 +52,21 @@ html {
 }
 .front-menu-desc {
   display: block;
+}
+.food-button {
   border-bottom: 4px solid #9A3334;
   padding-bottom: 1em;
+}
+.food-button button {
+  color: #9A3334;
 }
 
 .sidebar-menu {
   padding-top: 1em;
   text-align: right;
+}
+.front-order {
+  list-style-type: none;
 }
 
 // BACK OF HOUSE

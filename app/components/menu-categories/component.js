@@ -1,7 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  item: Ember.inject.service('current-orders'),
   items: [],
+
+  actions: {
+    makeOrder: function(item) {
+      this.get('item').makeOrder(item);
+    }
+  },
 
   categories: Ember.computed('items', 'items.@each.category', 'items.@each.name', function() {
     return this.get('items').reduce((build, item) => {
