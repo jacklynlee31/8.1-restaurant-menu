@@ -1,14 +1,12 @@
 @import "bourbon";
 @import "neat";
-
-// gray #414241
-// blue #6BBFEE
+@import "bower_components/font-awesome/scss/font-awesome";
 
 html {
   box-sizing: border-box;
-  font-family: arial;
-  color: #414241;
-  background-color: #F3EFE0;
+  font-family: 'Noto Sans', sans-serif;
+  color: #404040;
+  background-color: #9c3e3e;
 }
 
 *, *:before, *:after {
@@ -19,6 +17,25 @@ html {
 
 .all {
   @include outer-container(950px);
+  background-color: #e5d3c4;
+  padding: 1em;
+  border: 1px solid #404040;
+}
+.fa {
+  font-size: 3em;
+  display: inline;
+  vertical-align: middle;
+  color: #404040;
+}
+.title {
+  display: inline;
+  vertical-align: middle;
+}
+.title h2 {
+  display: inline;
+  padding-left: .5em;
+  vertical-align: middle;
+  vertical-align: middle;
 }
 .sidebar {
   @include span-columns(4 of 12);
@@ -26,15 +43,21 @@ html {
 }
 
 .top {
-    border-bottom: 1em solid #9A3334;
-    color: #414241;
+    border-bottom: .5em solid #404040;
+    color: black;
     padding: .3em;
     line-height: .3em;
+}
+h5 {
+  float: right;
+}
+.open {
+  padding-right: 2em;
 }
 .admin {
     padding: 1em;
     text-align: right;
-    border-bottom: .3em solid #9A3334;
+    border-bottom: .3em solid #404040;
 }
 .cat {
   font-weight: bold;
@@ -54,13 +77,15 @@ html {
   display: block;
 }
 .food-button {
-  border-bottom: 4px solid #9A3334;
+  border-bottom: 4px solid #404040;
   padding-bottom: 1em;
 }
 .food-button button {
-  color: #9A3334;
+  color: black;
 }
-
+.orderup button {
+  color: black;
+}
 .sidebar-menu {
   padding-top: 1em;
   text-align: right;
@@ -77,7 +102,7 @@ html {
   line-height: 3em;
   margin-top: 6em;
   padding: 1em;
-  border: 1em solid #9A3334;
+  border: 1em solid #404040;
 }
 
 .login-page {
@@ -86,7 +111,7 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #9A3334;
+  border: 1em solid #404040;
 }
 
 .login-page label {
@@ -95,7 +120,7 @@ html {
 
 .login-page button {
   background-color: white;
-  color: #414241;
+  color: black;
   margin: 0 auto;
 }
 
@@ -105,7 +130,7 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #9A3334;
+  border: 1em solid #404040;
 }
 
 .create-page label {
@@ -114,7 +139,7 @@ html {
 
 .create-page button {
   background-color: white;
-  color: #414241;
+  color: black;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -125,7 +150,7 @@ html {
   width: 20em;
   height: 5em;
   resize: none;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #404040;
 }
 
 .back-update {
@@ -134,7 +159,7 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #9A3334;
+  border: 1em solid #404040;
 }
 
 .back-update label {
@@ -143,7 +168,7 @@ html {
 
 .back-update button {
   background-color: white;
-  color: #414241;
+  color: black;
   margin: 0 auto;
   display: block;
 }
@@ -154,23 +179,23 @@ html {
   margin-top: 6em;
   padding: 1em;
   line-height: 2em;
-  border: 1em solid #9A3334;
+  border: 1em solid #404040;
 }
 .read-page {
   list-style-type: none;
 }
 .d {
   display: block;
-  border-bottom: 4px solid #9A3334;
+  border-bottom: 4px solid #404040;
 }
 a {
   text-decoration: none;
-  color: #414241;
+  color: black;
   font-weight: bold;
 }
 
 .admin-page a {
-  color: #414241;
+  color: #404040;
   font-weight: bold;
   text-decoration: none;
 }
