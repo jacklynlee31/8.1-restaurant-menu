@@ -1,17 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  orderedItems: [],
+  orderedFood: [],
 
-  orderItems: function(item) {
-    this.orderedItems.addObject(item);
+  chooseFood: function(item) {
+    this.orderedFood.addObject(item);
   },
 
   addOrder: function() {
     // Grab all our checked in items
-    var saves = this.get('orderedItems').map((item)=> {
-      // Increment the visits property
-      item.incrementProperty('visits', 1);
+    var saves = this.get('orderedFood').map((item)=> {
+      // Increment the orders property
+      item.incrementProperty('orders', 1);
 
       //  *  Save the current item
       //  *  and return it into the map
@@ -23,8 +23,8 @@ export default Ember.Service.extend({
      * Wait for all items to finish saving
      */
     return Ember.RSVP.Promise.all(saves).then(() => {
-      // Empty out the orderedItems array
-      this.set('orderedItems', []);
+      // Empty out the orderedFood array
+      this.set('orderedFood', []);
     });
   }
 });

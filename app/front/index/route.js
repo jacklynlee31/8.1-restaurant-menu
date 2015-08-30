@@ -8,6 +8,10 @@ export default Ember.Route.extend({
   item: Ember.inject.service('current-orders'),
 
   actions: {
+    chooseFood: function(item) {
+      this.get('order').chooseFood(item);
+    },
+
     save: function(data) {
       var item = this.modelFor('back.read');
       item.setProperties(data);
