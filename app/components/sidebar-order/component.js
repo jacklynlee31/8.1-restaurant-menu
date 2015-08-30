@@ -1,16 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['item-status'],
   item: Ember.inject.service('current-orders'),
-  // loading: false,
+  loading: false,
 
-  // actions: {
-  //   makeOrder: function() {
-  //     this.set('loading', false);
+  actions: {
+    addOrder: function() {
+      this.set('loading', true);
 
-  //     this.get('item').makeOrder().then(() => {
-  //       this.set('loading', false);
+      this.get('item').addOrder().then(() => {
+        this.set('loading', false);
       });
-//     }
-//   }
-// });
+    }
+  }
+});
