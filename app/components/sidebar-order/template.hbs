@@ -9,10 +9,13 @@
         <li>{{item.menuItem}} - {{item.price}}</li>
         {{/each}}
     </ul>
-    <span class="orderup">
-
-    {{item-status}}
-
-    <button>Order Up!</button>
-    </span>
+      {{#if item.orderedItems.length}}
+    {{#unless loading}}
+      {{md-btn text='Order Up!'
+        action='addOrder'
+        class='o-button'}}
+    {{else}}
+      {{md-loader}}
+    {{/unless}}
+  {{/if}}
 </div>
