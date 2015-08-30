@@ -7,7 +7,7 @@ export default Ember.Service.extend({
     this.orderedFood.addObject(item);
   },
 
-  addOrder: function() {
+  markFood: function() {
     // Grab all our checked in items
     var saves = this.get('orderedFood').map((item)=> {
       // Increment the orders property

@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   actions: {
     makeOrder: function(item) {
-      this.get('item').addOrder(item);
+      this.get('item').markFood(item);
     }
   },
 
