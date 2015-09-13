@@ -5,7 +5,7 @@ export default Ember.Service.extend({
 
   addItem: function(menuItem) {
     this.orderedFood.pushObject({
-      menuItem: item,
+      menuItem: menuItem,
     });
   },
 
