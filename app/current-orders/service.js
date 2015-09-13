@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   orderedFood: [],
 
-  makeOrder: function(menuItem) {
+  addItem: function(menuItem) {
     this.orderedFood.pushObject({
       menuItem: item,
     });

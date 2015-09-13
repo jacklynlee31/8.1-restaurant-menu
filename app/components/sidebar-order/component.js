@@ -6,10 +6,10 @@ export default Ember.Component.extend({
   loading: false,
 
   actions: {
-    markFood: function() {
+    addItem: function() {
       this.set('loading', true);
 
-      this.get('order').markFood().then(() => {
+      this.get('order').addItem().then(() => {
         this.set('loading', false);
       });
     }
