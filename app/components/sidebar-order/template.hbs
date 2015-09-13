@@ -5,11 +5,11 @@
 <div class="sidebar-menu">
     <span>Your Current Order:</span>
     <ul class="front-order">
-        {{#each item.orderedFood as |item|}}
+        {{#each order.orderedFood as |order|}}
         <li>{{item.menuItem}} - {{item.price}}</li>
         {{/each}}
     </ul>
-      {{#if item.orderedFood.length}}
+      {{#if order.orderedFood.length}}
     {{#unless loading}}
       {{md-btn text='Order Up!'
         action='addItem'
