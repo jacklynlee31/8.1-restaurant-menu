@@ -1,0 +1,13 @@
+<div class="admin">
+    {{#link-to 'back.login'}}Login as Administrator{{/link-to}}
+</div>
+
+<div class="sidebar-menu">
+    <span>Your Current Order:</span>
+    <ul class="front-order">
+        {{#each order.orderedFood as |item| }}
+        <li>{{item.menuItem}} - {{item.price}}</li>
+        {{/each}}
+        Total: ${{order.price}}
+    </ul>
+</div>

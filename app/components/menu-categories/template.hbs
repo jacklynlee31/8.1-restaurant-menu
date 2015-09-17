@@ -1,0 +1,16 @@
+{{#each categories as |category|}}
+    <div class="food">
+            <span class="cat">+ {{category.name}}</span>
+            {{#each category.items as |item|}}
+                <div class="front-menu">
+                        {{item.menuItem}} - {{item.price}}
+                    <span class="front-menu-desc">
+                        {{item.description}}
+                    </span>
+                    <div class="food-button">
+                        <button {{action 'addItem' item}}>Add to Cart</button>
+                    </div>
+                </div>
+            {{/each}}
+    </div>
+{{/each}}
