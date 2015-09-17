@@ -8,14 +8,6 @@
         {{#each order.orderedFood as |item| }}
         <li>{{item.menuItem}} - {{item.price}}</li>
         {{/each}}
+        Total: ${{order.price}}
     </ul>
-{{!--       {{#if order.orderedFood.length}}
-    {{#unless loading}}
-      {{md-btn text='Order Up!'
-        action='addItem'
-        class='o-button'}}
-    {{else}}
-      {{md-loader}}
-    {{/unless}}
-  {{/if}} --}}
 </div>
