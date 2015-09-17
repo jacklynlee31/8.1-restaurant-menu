@@ -6,7 +6,7 @@
     <span>Your Current Order:</span>
     <ul class="front-order">
         {{#each order.orderedFood as |item| }}
-        <li>{{log item.menuItem}} - {{item.price}}</li>
+        <li>{{item.menuItem}} - {{item.price}}</li>
         {{/each}}
     </ul>
 {{!--       {{#if order.orderedFood.length}}
